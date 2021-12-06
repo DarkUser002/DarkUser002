@@ -1,0 +1,16 @@
+#include <MeMCore.h> 
+#include <Arduino.h>
+#include <Wire.h>
+#include <SoftwareSerial.h>
+
+MeDCMotor motore_destra(9);
+MeDCMotor motore_sinistra(10);
+MeUltrasonicSensor ultrasonic_3(3);
+  
+  void avanti(int velocità) {
+      delay(1000)
+      motore_destra.run(velocità)
+      motore_sinistra.run(-velocità)
+  }
+  
+  inizio codice arduino
